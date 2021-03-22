@@ -9,6 +9,7 @@ function generateTarget() {
 }
 
 function compareGuesses(human, cpu, target) {
+    if (human > 9 || human < 0) alert('Your Number Is Out Of Range!')
     let winner;
     Math.abs(target - human) <= Math.abs(target - cpu) ? winner = true : winner = false;
     return winner;
